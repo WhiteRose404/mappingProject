@@ -20,5 +20,3 @@ def add_df_to_lan_lat_geojson(df, properties):
     return geojson
 
 
-print("hvfjhvfuhbgjhbjk")
-
