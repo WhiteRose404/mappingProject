@@ -6,4 +6,5 @@ properties = ["pays","cluster_km"]
 src = pd.read_csv("./data/data_with_clusters.csv")
 print("Wating assiging the contry coordinate...")
 geoJson = add_df_to_lan_lat_geojson(src, properties)
-print(geoJson)
+
+print(geoJson["features"])
