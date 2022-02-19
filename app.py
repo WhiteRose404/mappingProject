@@ -20,7 +20,7 @@ data = json.load(f)
 #    df.pays[i] = result.text
 #    print(df.pays[i])
 
-df.to_csv('./data/ENG_data_with_clusters_f.csv')
+#df.to_csv('./data/ENG_data_with_clusters_f.csv')
 #print(df.pays)
 fig = px.choropleth_mapbox(df, geojson=data, color="cluster_km",locations="pays", featureidkey="properties.ADMIN",mapbox_style="carto-positron")
 fig.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
