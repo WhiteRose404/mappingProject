@@ -1,4 +1,3 @@
-from geopy.geocoders import Nominatim
 import pandas as pd
 from Function import add_df_to_lan_lat_geojson
 import plotly.express as px
