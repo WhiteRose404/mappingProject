@@ -13,7 +13,7 @@ with open(folder / "countries.geojson") as f:
     data = json.load(f)
     fig = px.choropleth_mapbox( df, geojson=data, color=property[ind],
                                 locations="pays",featureidkey="properties.ADMIN",
-                                mapbox_style="carto-positron",hover_data=["pays","cluster_km_2","cluster_km","cluster_km_5"])
+                                mapbox_style="carto-positron",hover_data=["pays",property[ind]])
     print("Done")
     fig.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
-    fig.show()
+    fig.write_html( folder / (property[ind]+".html"))
